@@ -1,7 +1,8 @@
-const $forms = document.querySelectorAll(".signup-form");  
+const $forms = document.querySelectorAll(".signup-form");  // Consume la info que hay en nuestro Formulario
 const getTemplate = () => {
   return fetch("./template.html").then((response) => response.text()); // Funcion envia nuestra info de nuestro html o contenido 
 };
+// declarar el correo electronico  que vive dentro de mi pagina en internet del cual yo enviare el correo a mi usuario
 const sendEmailToApi = (address, template) => {      
   fetch(`https://bedu-email-sender-api.herokuapp.com/send`, {
     method: "POST",
